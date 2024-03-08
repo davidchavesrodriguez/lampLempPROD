@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: apache
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./app:/app
+      - ./apache/lampLemp.lan.conf:/etc/apache2/sites-enabled/lampLemp.lan.conf
+      - ./apache/certificados:/certificados
